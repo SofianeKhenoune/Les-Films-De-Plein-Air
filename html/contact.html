@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+  </head>
+
+  <body>
+    <div id="bloc-page">
+      <header>
+        <p><a href="../index.html"><img id="logo-head" src="../assets/images/logo.png" alt="logo" title="logo-asso"></a></p>
+        <nav>
+          <ul id="nav-menu">
+            <li><a href="le-festival.html">Le Festival</a></li>
+            <li><a href="au-programme.html">Au Programme!</a></li>
+            <li><a href="actualites.html">Actualités</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li id="search-icon"><a href="#"><img src="../assets/images/search-icon-white.png" alt="search-bar"></a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div id="corps-page">
+        <h1>Contact</h1>
+        <div id="infos-contact">
+          <div id="infos-text"><p>Association “Les films de plein air”</p><p>présidente: jennifer edwards</p></div>
+          <div>
+            <div class="icone-text"><img src="../assets/images/location.svg" alt="icone emplacement"><p>39 rue des rigoles 75020 paris</p></div>
+            <div class="icone-text"><img src="../assets/images/phone.svg" alt="icone téléphone"><p>06 55 55 55 55 OU 01 55 55 55 55</p></div>
+          </div>
+        </div>
+        <section id="bloc-contact">
+          <div id="formulaire">
+            <form method="post" action="traitement.php">
+              <p id="formulaire1">
+              <input type="text" name="nom" placeholder="Nom">
+              <input type="text" name="prénom" placeholder="Prénom">
+              </p>
+              <p id="formulaire2">
+              <input type="tel" name="téléphone" placeholder="Téléphone">
+              <input type="Email" name="adresse-mail" placeholder="Email">
+              </p>
+              <p id="formulaire3">Veuillez sélectionner l'objet de votre message:<br/></p>
+              <p>
+              <select name="objet" id="select-object">
+                  <option value="réservation">Réserver une ou plusieurs places</option>
+                  <option value="proposition">Proposer un Film</option>
+                  <option value="contact">Contacter un Membre de l'association</option>
+                  <option value="autres">Autres</option>
+              </select>
+              </p>
+              <p>
+              <textarea name="message" cols="50" rows="10" placeholder="Message"></textarea>
+              </p>
+              <p id="submit-bout">
+                <input type="submit" value="Envoyer">
+              </p>
+            </form>
+          </div>
+          <div id="adh-don">
+            <div id="adherer">
+              <h3>adhérer à l’association</h3>
+              <P>Nous avons besoin de vous, de votre passion et de votre détermination. Venez partager l’aventure avec nous</P>
+              <div><a href="#">télécharger le formulaire</a></div>
+            </div>
+            <div id="don">
+              <h3>don</h3>
+              <P>Parce qu’une association comme la notre ne survit pas sans financement. Participer afin de faire partager la passion du cinéma au plus grand nombre</P>
+              <div><a href="">faire un don</a></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        <div id="footer-haut">
+          <div><a href="/..index.html"><img id="logo-foot" src="../assets/images/logo.png" alt="logo" title="logo-asso"></a></div>
+          <div id="footer-nav">
+            <nav>
+              <ul>
+                <li><a href="le-festival.html">Le Festival</a></li>
+                <li><a href="au-programme.html">Au Programme!</a></li>
+                <li><a href="actualites.html">Actualités</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav></div>
+        </div>
+
+        <div id="footer-bas">
+          <div id="footer-text">
+            <div class="f-text">
+              <h3><a href="actualites.html">Actualités</a></h3>
+              <p><a href="actualites.html">Le Festival</a></p>
+              <p><a href="actualites.html">Les Chiffres</a></p>
+              <p><a href="actualites.html">La Presse en Parle</a></p>
+            </div>
+            <div class="f-text">
+              <h3><a href="#">En ce Moment</a></h3>
+              <p><a href="#">Mathieu Kassovitz</a></p>
+              <p><a href="#">Nouveaux Films</a></p>
+              <p><a href="#">Choix du Public</a></p>
+            </div>
+            <div class="f-text">
+              <h3><a href="#">Guide</a></h3>
+              <p><a href="le-festival.html">Accès</a></p>
+              <p><a href="contact.html">Faire un Don</a></p>
+              <p><a href="mentions-légales.html">Mentions Légales</a></p>
+            </div>
+          </div>
+
+          <div id="search-socials">
+            <div id="search-bar"><input type="text" placeholder="Hé ho! Je peux vous aider ?"></div>
+            <div id="sociaux"><a href="https://twitter.com"><img src="../assets/images/twitter.svg.png" alt="twitter"></a> <a href="https://instagram.com"><img src="../assets/images/icons8-instagram.svg" alt="instagram"></a>
+            <a href="https://facebook.com"><img src="../assets/images/icons8-facebook.svg" alt="facebook"></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

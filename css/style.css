@@ -1,0 +1,1938 @@
+@font-face {
+  font-family: 'josefinsans'; /*utilisation de cette police pour les liens*/
+  src: url('../fonts/josefinsans-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'josefinsans'; /*utilisation de cette police pour les titres*/
+  src: url('../fonts/josefinsans-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'ubuntu'; /*utilisation de cette police pour les paragraphes*/
+  src: url('../fonts/ubuntu-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'ubuntu'; /*utilisation de cette police pour les paragraphes*/
+  src: url('../fonts/ubuntu-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/************************************NORMALIZE**********************/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  margin: 0;
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  font-family: 'josefinsans', 'ubuntu', arial, verdana, sans serif; /*polices du site*/
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+  background-color: #5B5152;
+  color: #fff;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+/************************************NORMALIZE**********************/
+
+/************************************CSS GENERAL**********************/
+
+#bloc-page {  /*page*/
+  display: flex;
+  flex-direction: column;
+}
+
+#corps-page { /*contenu sans le header et le footer*/
+  margin: 100px 30px 120px 30px;
+}
+
+h1 {  /*titres*/
+  font-size: 5em;
+  margin: 0.67em 0;
+  font-weight: bold;
+  font-size: 5em;
+  text-transform: capitalize;
+  color: #fff;
+  font-family: 'josefinsans', 'ubuntu', 'verdana';
+  margin-top: 100px;
+}
+
+h3 {  /*titres*/
+  font-family: 'josefinsans';
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+
+p /*paragraph*/
+{
+  font-family: 'ubuntu','verdana';
+  font-weight: normal;
+  font-size: 1.3em;
+}
+
+
+a, figcaption
+{ /*boutons et légendes*/
+  font-family: 'josefinsans';
+  font-weight: normal;
+  text-transform: capitalize;
+}
+/************************************CSS GENERAL**********************/
+
+
+/************************************STYLE DU HEADER**********************/
+header
+{
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background: #2D0C0C;
+  justify-content: space-between;
+  border-bottom: 3px white solid;
+}
+
+header ul
+{
+  display: flex;
+  list-style-type: none;
+  margin-right: 0px;
+}
+
+header nav a
+{
+  font-family: 'josefinsans';
+  font-size: 1.8em;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+header nav a:hover
+{
+  background-color: #968A8C;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#nav-menu li
+{
+  margin-right: 40px;
+  margin-top: 30px;
+}
+
+#logo-head
+{
+  position: absolute;
+  z-index: 2;
+  height: 150px;
+  margin-left: 100px;
+  margin-top: 10px;
+}
+
+#search-icon img
+{
+  width: 20px;
+  height: 20px;
+}
+/*header*/
+
+@media all and (max-width: 1024px)
+{
+  header
+  {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav
+  {
+    width: 100%;
+  }
+
+  #nav-menu
+  {
+    justify-content: center;
+    margin-right: 20px;
+    align-items: center;
+    margin-top: -110px;
+  }
+  #nav-menu a
+  {
+    font-size: 1.4em;
+  }
+
+  #search-icon
+  {
+    display: none;
+  }
+  header nav
+  {
+    width: 100%;
+  }
+
+
+
+  #logo-head
+  {
+    justify-content: center;
+    height: 100px;
+    margin-left: -60px;
+    margin-top: 40px;
+
+  }
+}
+
+@media all and (max-width: 640px)
+{
+
+  #nav-menu a
+  {
+    font-size: 1em;
+  }
+
+  #nav-menu li
+  {
+    margin-right: 0;
+  }
+}
+/************************************STYLE DU HEADER**********************/
+
+
+
+
+/************************************STYLE DE LA PAGE D'ACCUEIL**********************/
+
+/*hero*/
+#hero
+{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-image: url(../assets/images/les-moissonneurs.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  text-transform: capitalize;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+#hero-text
+{
+  margin-top: 250px;
+
+}
+
+#call-action
+{
+  font-weight: bold;
+  font-size: 2em;
+  margin-top: 50px;
+
+}
+
+#bout-action a
+{
+  background-color: #494444;
+  color: #fff;
+  padding: 10px 20px 10px 20px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+#bout-action a:hover
+{
+  background-color: #998185;
+  font-size: 1,5em;
+}
+
+
+#figcaption-hero
+{
+  align-self: flex-start;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+#figcaption-hero a
+{
+  text-decoration: none;
+  color: #fff;
+  font: normal;
+}
+/*hero*/
+
+/*slider*/
+#home-slider
+{
+  position: relative;
+  width: 900px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+#home-slider h1
+{
+  margin-top: 150px;
+  text-align: center;
+}
+
+
+#slides
+{
+  float: left;
+  width: 700px;
+  height: 400px;
+  position: relative;
+  margin: auto;
+  margin-top: 50px;
+}
+#slides img
+{
+  border-radius: 7px;
+
+}
+
+#slide1
+{
+  position: absolute;
+  margin-left: -200px;
+
+
+}
+#slide2
+{
+  position: absolute;
+  z-index: 3;
+  margin: -30px 0px 0px 100px;
+
+}
+
+#slide3
+{
+  position: absolute;
+  margin-right: 0px;
+  margin-left: 400px
+}
+
+#navigation-slide
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 80px;
+  padding-left: 20px;
+  margin-top: -100px;
+  display: none;
+
+}
+#navigation-slide input
+{
+  background-color: #fff;
+}
+
+#navigation-slide :nth-child(1)
+{
+  margin-left: 20px;
+}
+
+.point-slide
+{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 40px;
+
+}
+
+.point-slide:hover
+{
+  background-color: #998185;
+}
+/*slider*/
+/*ACCUEIL DESKTOP*/
+/*ACCUEIL MOBILE*/
+@media all and (max-width: 1024px)
+{
+  #hero h1
+  {
+    font-size: 3em;
+  }
+  h1
+  {
+    font-size: 4em;
+  }
+
+  h3
+  {
+    font-size: 1.5em;
+  }
+
+  #call-action
+  {
+    font-size: 1.5em;
+  }
+  p
+  {
+    font-size: 1em;
+  }
+
+  a
+  {
+    font-size: 1.2em;
+  }
+
+  #home-slider
+  {
+    margin: auto;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  #slides img
+  {
+    width: 100%;
+  }
+
+  #slides
+  {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  #slide2 img
+  {
+    width: 100%;
+
+  }
+  #slide1, #slide3
+  {
+    display: none;
+  }
+  #slide2
+  {
+    margin: auto;
+  }
+
+  #navigation-slide
+  {
+    display: block;
+    display: flex;
+  }
+
+}
+
+@media all and (max-width: 640px)
+{
+  h1
+  {
+    font-size: 3em;
+  }
+
+  h3
+  {
+    font-size: 1em;
+  }
+
+  p
+  {
+    font-size: 0.8em;
+  }
+
+  a
+  {
+    font-size: 1em;
+  }
+  #navigation-slide
+  {
+    width: 100%;
+  }
+  #call-action
+  {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+}
+/*ACCUEIL MOBILE*/
+/************************************STYLE DE LA PAGE D'ACCUEIL**********************/
+
+/************************************STYLE DE LA PAGE LE FESTIVAL**********************/
+
+
+/*LE FESTIVAL DESKTOP*/
+#present-regles
+{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 70px;
+}
+
+#present-regles p, #localisation p
+{
+  font-size: 1.4em;
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+#presentation
+{
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  width: 45%;
+}
+
+#presentation h3
+{
+  background-color: #916A69;
+  padding: 5px 0 5px 0;
+  margin-top: 0;
+  text-align: center;
+  width: 100%;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.5em;
+
+}
+
+#presentation img
+{
+  float: right;
+  width: 230px;
+  height: auto;
+  margin-left: 20px;
+}
+
+#presentation p
+{
+  line-height: 1.8em;
+}
+
+#presentation-2 a
+{
+  color: #000;
+  font-weight: bold;
+  text-transform: none;
+  font-size: 1.2em;
+}
+
+#regles
+{
+  display: flex;
+  width: 45%;
+  flex-direction: column;
+  background-color: #916A69;
+  border-radius: 10px;
+  padding: 0 30px 20px 30px;
+}
+
+#localisation
+{
+  display: flex;
+  flex-direction: column;
+}
+
+#local-text
+{
+  margin-bottom: 50px;
+}
+#localisation h3
+{
+  background-color: #916A69;
+  padding: 5px;
+  width: 25%;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+#donnees-maps
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+#donnees
+{
+  display: flex;
+  flex-direction: column;
+}
+
+#donnees p
+{
+  line-height: 1em;
+  font-size: 1.3em;
+}
+#donnees a
+{
+  color: #fff;
+  text-decoration: none;
+  font-family: 'ubuntu';
+  font-size: 1em;
+  font-weight: normal;
+}
+
+#donnees>.icone-text
+{
+  margin-bottom: -10px;
+}
+
+#donnees :first-child
+{
+  margin-top: -15px;
+}
+#maps
+{
+  width: 50%;
+  height: auto;
+}
+
+#maps img
+{
+  width: 100%;
+  height: auto;
+  border-radius: 7px;
+}
+/*LE FESTIVAL DESKTOP*/
+/*LE FESTIVAL mobile*/
+@media all and (max-width: 1024px)
+{
+  #present-regles
+  {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 70px;
+  }
+
+  #presentation-2 img
+  {
+    display: none;
+  }
+
+  #presentation
+  {
+    width: 100%;
+  }
+
+  #regles
+  {
+    width: auto;
+
+  }
+
+  #donnees-maps
+  {
+    flex-direction: column-reverse;
+  }
+
+  #maps
+  {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  #maps img
+  {
+    width: 100%;
+    height: auto;
+  }
+
+  #donnees p, a
+  {
+    font-size: 1.2em;
+    font-family: verdana;
+  }
+
+  #localisation h3
+  {
+    width: 30%;
+  }
+}
+
+/*LE FESTIVAL mobile*/
+/************************************STYLE DE LA PAGE LE FESTIVAL**********************/
+
+/************************************STYLE DE LA PAGE AU PROGRAMME!**********************/
+#prog-jour1, #prog-jour2, #prog-jour3, #prog-jour4
+{
+  display: flex;
+  margin: auto;
+  padding: 20px;
+}
+
+#prog-jour2, #prog-jour4
+{
+  flex-direction: row-reverse;
+}
+
+#prog-jour2>.figures, #prog-jour4>.figures
+{
+  margin-left: 40px;
+}
+
+#prog-jour1>.figures, #prog-jour3>.figures
+{
+
+}
+
+.figures img
+{
+  width: 100%;
+  border-radius: 7px;
+
+}
+
+#prog-jour1 figure, #prog-jour3 figure, #prog-jour2 figure, #prog-jour4 figure
+{
+  margin-left: 0;
+  width: 600px;
+  height: auto;
+}
+
+#prog-jour1 p, #prog-jour4 p
+{
+  line-height: 1.5em;
+}
+
+#prog-jour2>.figures, #prog-jour4>.figures
+{
+  margin-right: -40px;
+}
+
+
+.prog-text h3
+{
+  background-color: #916A69;
+  padding: 15px 0 15px 0;
+  text-align: center;
+  width: 100%;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.7em;
+
+}
+
+.prog-text p
+{
+  font-size: 1.5em;
+  text-align: justify;
+  line-height: 1.8em;
+  margin-top: 0.5px;
+
+
+}
+
+.prog-text a
+{
+  display: inline-block;
+  padding: 15px 0 15px 0;
+  background-color: #2D0C0C;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.7em;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+
+}
+
+
+.prog-text
+{
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  margin-top: -8px;
+}
+
+.separateur img
+{
+  width: 100%;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*PAGE AU PROGRAMME desktop*/
+/*PAGE AU PROGRAMME mobile*/
+
+@media all and (max-width: 1024px)
+{
+  #prog-jour1, #prog-jour2, #prog-jour3, #prog-jour4
+  {
+    flex-direction: column;
+  }
+
+  #prog-jour2>.figures, #prog-jour4>.figures
+  {
+    margin-left: 0px;
+  }
+
+  #prog-jour1>.figures, #prog-jour3>.figures
+  {
+    margin-right: 0px;
+  }
+
+  #prog-jour1 figure, #prog-jour3 figure, #prog-jour2 figure, #prog-jour4 figure
+  {
+    width: 100%;
+  }
+
+  .separateur img
+  {
+    width: 100%;
+  }
+  #prog-jour2>.figures, #prog-jour4>.figures
+  {
+    margin: initial;
+  }
+
+  .prog-text p
+  {
+    margin-top: 20px;
+    order: 3;
+  }
+  .prog-text h3
+  {
+    width: 49%;
+    font-size: 1.3em;
+  }
+
+  .prog-text a
+  {
+    justify-content: flex-end;
+    font-size: 1.3em;
+
+
+  }
+  .prog-titre
+  {
+    width: 49%;
+    align-self: flex-end;
+    margin-top: -74px;
+  }
+}
+/*PAGE AU PROGRAMME mobile*/
+/************************************STYLE DE LA PAGE AU PROGRAMME!**********************/
+
+
+/************************************STYLE DE LA PAGE PROGRAMME DU 5 AOUT!**********************/
+
+#bloc-video1, #bloc-video2, #bloc-video3, #bloc-video4
+{
+  display: flex;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#bloc-video2, #bloc-video4
+{
+  flex-direction: row-reverse;
+}
+
+#bloc-video1 video, #bloc-video3 video
+{
+  margin-left: 0;
+  width: 600px;
+  height: auto;
+}
+
+#bloc-video2 video, #bloc-video4 video
+{
+  margin-right: 0;
+  width: 600px;
+  height: auto;
+
+}
+
+#bloc-video1 h3, #bloc-video2 h3, #bloc-video3 h3, #bloc-video4 h3
+{
+  background-color: #916A69;
+  padding: 5px 0 5px 0;
+  text-align: center;
+  width: 100%;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.7em;
+
+}
+
+#bloc-video1 p, #bloc-video2 p, #bloc-video3 p, #bloc-video4 p
+{
+  font-size: 1.4em;
+  text-align: justify;
+  line-height: 1.4em;
+
+}
+
+#video-text4 p
+{
+  margin-bottom: 5px;
+}
+
+
+#bloc-video1 a, #bloc-video2 a, #bloc-video3 a, #bloc-video4 a
+{
+  display: inline-block;
+  padding: 15px 0 15px 0;
+  background-color: #2D0C0C;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.7em;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+
+}
+
+#bloc-video2 a, #bloc-video3 a, #bloc-video4 a
+{
+  margin-top: px;
+}
+
+
+#bloc-video2 h3, #bloc-video3 h3, #bloc-video4 h3
+{
+  margin-top: 0px;
+}
+
+#video-text1, #video-text2, #video-text3, #video-text4
+{
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  margin-top:;
+}
+
+#video-text1, #video-text3
+{
+  margin-left: 40px;
+}
+
+#video-text2, #video-text4
+{
+  margin-right: 40px;
+}
+
+#video-text1 a
+{
+  margin-top: 25px;
+}
+#video-text2 p
+{
+  margin-top: 5px;
+}
+
+#video-text3 a
+{
+  margin-top: 18px;
+}
+
+#video-text4 p, .video-text4 a
+{
+  margin-top: -15px;
+}
+
+/************************************STYLE DE LA PAGE PROGRAMME DU 5 AOUT!**********************/
+
+/*********************************STYLE DE LA PAGE D'ACTUALITES*********************************/
+#bout-newsletter a
+{
+  background-color: #494444;
+  color: #fff;
+  padding: 10px 20px 10px 20px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: capitalize;
+  margin-right: 30px;
+  margin-top: 30px;
+  text-align: center;
+  float: right;
+
+}
+
+#bout-newsletter a:hover
+{
+  background-color: #998185;
+  font-size: 1,5em;
+}
+
+h1
+{
+  text-align: center;
+}
+
+#temoignage, #festival-chiffres, #mot-presse
+{
+  margin: 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #6B6061;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#temoignage h3, #festival-chiffres h3, #mot-presse h3
+{
+  background-color: #916A69;
+  text-align: center;
+  width: 100%;
+  font-family: 'josefinsans';
+  padding: 5px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.7em;
+  margin-top: -40px;
+}
+
+#temoignage p, #festival-chiffres p, #mot-presse p
+{
+  font-size: 1.5em;
+  text-align: justify;
+  line-height: 1.8em;
+}
+
+#temoignage video
+{
+  margin-top: 40px;
+}
+
+#festival-chiffres video
+{
+  margin-bottom: 10px;
+}
+
+.text-titre
+{
+  padding: 20px 40px 20px 20px;
+}
+
+#festival-chiffres
+{
+  flex-direction: row-reverse;
+  padding-bottom: 10px;
+}
+
+#festival-chiffres video
+{
+  margin-top: -10px;
+}
+
+#mot-presse
+{
+  margin-bottom: 200px;
+}
+#mot-presse img
+{
+ margin-top: -50px;
+}
+
+@media all and (max-width: 1024px)
+{
+  #bout-newsletter a
+  {
+    margin-top: 70px;
+    font-size: 1.5em;
+  }
+  #temoignage, #festival-chiffres, #mot-presse
+  {
+    flex-direction: column;
+  }
+  #festival-chiffres video, #temoignage video, #mot-presse img
+  {
+    align-self: center;
+    width: 100%;
+    height: auto;
+  }
+
+  #temoignage h3, #festival-chiffres h3, #mot-presse h3
+  {
+    width: 100%;
+  }
+
+
+
+
+}
+/****************************************STYLE DE LA PAGE D'ACTUALITES************************************/
+
+/**********************************************STYLE DE LA PAGE CONTACT***********************************/
+
+/*formulaire/contact*/
+input
+{
+  border-radius: 10px;
+  padding: 10px;
+  font-family: 'ubuntu';
+}
+
+textarea
+{
+  border-radius: 10px;
+}
+
+#bloc-contact
+{
+  margin-bottom: 80px;
+}
+
+#infos-contact
+{
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+
+#infos-contact p
+{
+  text-transform: capitalize;
+  font-size: 1.5em;
+}
+
+#bloc-contact
+{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#formulaire
+{
+  width: 60%;
+}
+
+#formulaire1 :nth-child(1), #formulaire2 :nth-child(1)
+{
+  margin-right: 20px;
+}
+
+#adh-don
+{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: 50px;
+  justify-content: space-between;
+}
+
+#adh-don h3
+{
+  background-color: #916A69;
+  padding: 5px 0 5px 0;
+  text-align: center;
+  width: 100%;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.7em;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+#adh-don p
+{
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+#adh-don a
+{
+  display: inline-block;
+  padding: 10px 0 10px 0;
+  background-color: #2D0C0C;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.7em;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
+#adherer, #don
+{
+  background-color: #6B6061;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  text-align: justify;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#adherer
+{
+  margin-top: 15px;
+}
+
+#don
+{
+  margin-bottom: 60px;
+  height: 46%;
+}
+
+#don a
+{
+ margin-top: 50px;
+}
+
+#formulaire input, textarea
+{
+  width: 100%;
+}
+#formulaire1, #formulaire2, textarea
+{
+  display: flex;
+  margin-bottom: 40px;
+}
+
+#select-object
+{
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+select
+{
+  padding-left: 10px;
+}
+
+#formulaire1, #formulaire2
+{
+  align-content: space-between;
+}
+
+#submit-bout input
+{
+  margin-bottom: 40px;
+  background-color: #531A17;
+  color: #fff;
+  font-size: 1.5em;
+  border: 0;
+}
+.icone-text
+{
+  display: flex;
+}
+
+.icone-text img
+{
+  margin-right: 20px;
+}
+
+#infos-text
+{
+  display: flex;
+  flex-direction: column;
+}
+
+#adh-don a:hover
+{
+  background-color: #998185;
+  font-size: 1,8em;
+}
+
+#don p
+{
+  line-height: 1.4em;
+}
+
+@media all and (max-width: 1024px)/**************************************RESPONSIVE POINT**************************************/
+{
+
+  #bloc-contact
+  {
+    flex-direction: column;
+  }
+
+  #infos-contact p
+  {
+    font-size: 1em;
+
+  }
+
+  #adh-don h3
+  {
+    font-size: 1.2em;
+  }
+
+  #adh-don a
+  {
+    font-size: 1.2em;
+  }
+  #formulaire
+  {
+    width: 100%;
+  }
+  form
+  {
+    width: 100%;
+  }
+
+  #adh-don
+  {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #adherer
+  {
+    margin-bottom: 50px;
+  }
+}
+/*formulaire/contact*/
+/**************************************STYLE DE LA PAGE CONTACT*****************************************/
+
+/**************************************STYELE DE LA PAGE MENTIONS LEGALES************************************/
+.mentions
+{
+  margin: 0px 50px 100px 50px;
+  font-weight: bold;
+  text-align: justify;
+}
+
+.mentions p
+{
+  font-size: 1.3em;
+}
+
+.mentions h3
+{
+  font-size: 1.5em;
+}
+
+/*MENTIONS LEGALES*/
+@media all and (max-width: 1280px)
+{
+  .prog-jour1, .prog-jour2, .prog-jour3, .prog-jour4
+  {
+    flex-direction: column;
+  }
+
+}
+
+/**************************************STYELE DE LA PAGE MENTIONS LEGALES************************************/
+
+
+/************************************************STYLE DU FOOTER*********************************************/
+footer a
+{
+  font-family: 'josefinsans';
+}
+footer
+{
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  flex-direction: ;
+  position: relative;
+  background-color: #2D0C0C;
+  width: 100%;
+  height: 200px;
+  border-top: 3px solid #fff;
+}
+
+#footer-haut
+{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50%;
+  margin-top:
+}
+
+#footer-bas
+{
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  width: 100%;
+  height: 50%;
+  margin-top: 55px;
+}
+
+#logo-foot
+{
+  height: 150px;
+  margin-top: -80px;
+  margin-left: 100px;
+}
+
+#footer-nav
+{
+  margin-right: 40px;
+  margin-top: -40px;
+
+}
+#footer-nav ul
+{
+  display: flex;
+  background-color: #C4C4C4;
+  padding-inline-start: 0px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 7px;
+}
+
+#footer-nav li
+{
+  margin: 0 10px 0 10px;
+  list-style-type: none;
+
+}
+#footer-nav a
+{
+  text-decoration: none;
+  color: #000;
+  font-size: 1.3em;
+  font-family:'ubuntu';
+  padding: 10px;
+
+}
+
+#footer-nav a:hover
+{
+  color: #fff;
+  padding: 5px 10px 5px 10px;
+  background-color: #2D0C0C;
+  border-radius: 5px;
+
+}
+
+.f-text
+{
+margin-right: 40px;
+line-height: 0.3em;
+margin-top: 10px;
+}
+
+.f-text h3
+{
+  font-size: 1.7em;
+}
+
+.f-text p
+{
+  font-size: 1em;
+}
+
+.f-text a
+{
+  text-decoration: none;
+  color: #fff;
+}
+
+#footer-text
+{
+  display: flex;
+  text-decoration: none;
+  margin-left: 20px;
+}
+#footer-text li
+{
+  margin-right: 20px;
+}
+
+#sociaux
+{
+  display: flex;
+  justify-content: flex-end;
+}
+#sociaux img
+{
+  margin-left: 5px;
+}
+
+#search-socials
+{
+  margin-top: 10px;
+  margin-right: 40px;
+}
+
+#search-bar input
+{
+  width: 250px;
+  height: 20px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+#search-bar
+{
+  justify-content: flex-end;
+  display: flex;
+}
+/*footer*/
+
+@media all and (max-width: 1024px)
+{
+  .f-text h3
+  {
+    font-size: 1em;
+  }
+
+  #footer-bas
+  {
+    margin-bottom: -50px;
+  }
+  #footer-bas p
+  {
+    font-size: 0.7em;
+  }
+
+  #footer-nav
+  {
+    display: none;
+  }
+
+  #footer-haut
+  {
+    justify-content: center;
+    margin-top: 30px;
+  }
+  #footer-text
+  {
+    margin-left: 0;
+    width: 80%;
+  }
+
+  .f-text
+  {
+    margin-right: 20px;
+    margin-left: 20px;
+    line-height: 0.6em;
+  }
+
+  #footer-bas input
+  {
+    width: 40%;
+    height: 8px;
+    align-self: flex-start;
+  }
+  #search-socials
+  {
+    width: 40%;
+    height: 8px;
+  }
+  #search-bar
+  {
+    justify-content: flex-end;
+  }
+
+  #sociaux img
+  {
+    width: 25px;
+  }
+
+  #logo-foot
+  {
+    position: absolute;
+    height: 100px;
+    margin-left: -70px;
+}
+
+@media all and (max-width: 640px)
+{
+  footer
+  {
+    height: 150px;
+  }
+  #footer-text
+  {
+    width: 80%;
+    margin-left: 10px;
+  }
+  #footer-bas
+  {
+    margin-bottom: -50px;
+  }
+
+  .f-text
+  {
+  margin-right: 5px;
+  margin-left: 0;
+  line-height: 0.2em;
+  }
+
+  .f-text h3
+  {
+    font-size: 0.8em;
+  }
+  .f-text
+  {
+    font-size: 0.6em;
+  }
+  #sociaux img
+  {
+    width: 20px;
+  }
+}
+/**************************************************STYLE DU FOOTER***************************************/
+
